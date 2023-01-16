@@ -1,0 +1,135 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+	border-style: dashed;
+	border-color: orange;
+	color: white;
+	
+}
+
+.header {
+	background-color: black;
+	background-image: url(yellow.png);
+}
+
+h1 {
+	text-align: center;
+}
+
+table {
+	table-layout: fixed;
+	height: 95%;
+	width: 98.5%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+
+table.design {
+	background-color: black;
+	color: white;
+	border-spacing: 5px;
+	
+}
+
+table.design td {
+  padding: 20px;
+  background-color: black;
+  border-style: dashed;
+  border-color: yellow;
+  background-image: url(orange.jpg);
+  vertical-align: top;
+}
+table.design th {
+  padding: 20px;
+  background-color: black;
+  border-style: dashed;
+  border-color: orange;
+}
+
+table.design button, .button {
+	background-color: black;
+	border-style: dashed;
+	border-color: orange;
+	color: white;
+}
+
+table.design button:hover, .button:hover {
+	background-color: orange;
+	color: black;
+}
+
+
+table.feature {
+	border-spacing: 5px;
+	background-color: black;
+	color: yellow;
+}
+table.feature td {
+	vertical-align: top;
+	text-indent: 5px;
+	border-style: dashed;
+	border-color: gray;
+}
+
+table.feature th {
+	color: white;
+	border-style: dashed;
+	border-color: lightgray;
+}
+
+table.feature tr:nth-child(even) {
+	color: orange; 
+}
+
+
+
+.section {
+	display: box;
+	margin-left: auto;
+	margin-right: auto;
+	width: 55%;
+	text-align: left;
+	padding: 5px;
+	color: yellow;
+	background-color: black;
+}
+
+.rgt {
+	text-align: right;
+}
+
+.ctr {
+	text-align: center;
+	color: orange;
+}
+
+
+.header,footer,nav {
+	padding: 10px;
+}
+
+.option {
+	color: black;
+	text-align: center;
+	font-weight: bold;
+}
+
+nav button {
+	display: box;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	height: 99%;
+}
+
+span {
+	padding: 20px;
+}
+
+.width {
+	width: 40%;
+}

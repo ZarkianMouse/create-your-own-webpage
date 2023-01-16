@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./pa5_style.css">
+		<title>Burhoe Project #5</title>
+	</head>
+    <body>
+		<div class="header"><h1>Build Your Own Website</h1></div>
+		<table class="design" border="1" style="text-align: center">
+			<tr>
+				<th colspan="4" style="text-align: center">Design Console</th>
+			</tr>
+			<tr>
+				<td colspan="2" class="option">Components</td>
+				<td colspan="2" class="option">Customizations</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="section">
+					<div class="ctr"><strong>Buttons</strong></div>
+					Button Location: 
+					<select class="hover" name="loc_button" id="loc_button">
+						<option value="main">main area</option>
+						<option value="header">header</option>
+						<option value="footer">footer</option>
+						<option value="nav">navigation</option>
+						<option value="div">div block</option>
+					</select>
+					<br>
+					Button Name: <input type="text" name="txt_button" value="">
+					<div class="rgt"><button onclick="addButton()">Add</button></div>
+					</div>
+					
+				</td>
+				<td>
+					<div class="section">
+					<div class="ctr"><strong>Dividers & Navigation</strong></div>
+					Item to add: 
+					<select name="attr_add">
+						<option value="nav">navigation</option>
+						<option value="div">divider tag</option>
+					</select>
+					<div class="rgt"><button onclick="addTag()">Add</button></div>
+					</div>
+				</td>
+				
+				<td>
+					<div class="section">
+						<div class="ctr"><strong>Text Alignment</strong></div>
+						Attribute: <select name="attr_align">
+							<option value="h1">website name</option>
+							<option value="body">body</option>
+							<option value="header">header</option>
+							<option value="main">main area</option>
+							<option value="footer">footer</option>
+							<option value="nav">navigation</option>
+							<option value="div">div block</option>
+							<option value="h2">heading</option>
+							<option value="p">paragraphs</option>
+							<option value="form">form</option>
+							<option value="button">button</option>
+						</select>
+						<br>
+						Style:
+						<select name="align">
+							<option value="center">center</option>
+							<option value="left">left</option>
+							<option value="right">right</option>
+							<option value="justify">justify</option>
+						</select>
+					<div class="rgt"><button onclick="changeAlignment()">Customize</button></div>
+					</div>
+				</td>
+				<td>
+					<div class="section">
+						<div class="ctr"><strong>Borders</strong></div>
+						Attribute: <select name="attr_border">
+							<option value="h1">website name</option>
+							<option value="body">body</option>
+							<option value="header">header</option>
+							<option value="main">main area</option>
+							<option value="footer">footer</option>
+							<option value="nav">navigation</option>
+							<option value="div">div block</option>
+							<option value="h2">heading</option>
+							<option value="p">paragraphs</option>
+							<option value="form">form</option>
+							<option value="fieldset">fieldset</option>
+							<option value="legend">legend</option>
+							<option value="button">button</option>
+						</select>
+						<input type="color" name="border_color" style="float: right">
+						<br>
+						Style: <select name="border_style">
+							<option value="solid">solid</option>
+							<option value="dotted">dotted</option>
+							<option value="dashed">dashed</option>
+							<option value="groove">grooved</option>
+							<option value="double">double</option>
+							<option value="ridge">ridge</option>
+							<option value="inset">inset</option>
+							<option value="outset">outset</option>
+						</select>
+							
+						<br>
+						Width: <select name="border_width">
+							<option value="5px">5px</option>
+							<option value="10px">10px</option>
+							<option value="15px">15px</option>
+						</select>
+						
+					<div class="rgt"><button onclick="changeBorder()">Customize</button></div>
+					</div>
+				
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="section">
+						<div class="ctr"><strong>Text</strong></div>
+						Text Type: <select name="attr_txt">
+							<option value="p">paragraph</option>
+							<option value="title">tab name</option>
+							<option value="h2">heading</option>
+						</select>
+						<br>
+						Text Location: <select name="loc_txt">
+							<option value="header">header</option>
+							<option value="main">main area</option>
+							<option value="footer">footer</option>
+							<option value="div">div block</option>
+						</select>
+						<br/>
+						<textarea name="words" rows="5" cols="20"></textarea>
+					<div class="rgt"><button onclick="addTxt()">Add</button></div>
+					</div>
+				</td>
+				<td>
+					<div class="section">
+						<div class="ctr"><strong>Forms</strong></div>
+						<form action="#" method="post" id="form_add">
+						Form Location:
+						<select name="loc_form">
+							<option value="main">main area</option>
+							<option value="nav">navigation</option>
+							<option value="div">div block</option>
+						</select>
+						<br>
+						Form Name: <input type="text" name="name_form" value="">
+						<br>
+						Form Options:
+						<br>
+						<select name="attr_form[]" id="attr_form" multiple>
+							<option value=""></option>
+							<option value="name">Name</option>
+							<option value="phone">Phone</option>
+							<option value="email">Email</option>
+							<option value="color">Color</option>
+							<option value="textarea">Text area</option>
+						</select>
+							
+						<div class="rgt"><input type="submit" value="Add" class="button"></div>
+					</form>
+					</div>
+				</td>
+				<td>
+					<div class="section">
+					
+						<div class="ctr"><strong>Width & Height</strong></div>
+						Attribute: <select name="attr_wh">
+							<option value="h1">website name</option>
+							<option value="body">body</option>
+							<option value="header">header</option>
+							<option value="nav">navigation</option>
+							<option value="main">main area</option>
+							<option value="footer">footer</option>
+							<option value="fieldset">fieldset</option>
+							<option value="legend">legend</option>
+							<option value="div">div block</option>
+							<option value="h2">heading</option>
+							<option value="p">paragraphs</option>
+							<option value="form">form</option>
+							<option value="button">button</option>
+						</select>
+						<br>
+						Change: <select name="wh">
+							<option value="width">width</option>
+							<option value="height">height</option>
+						</select>
+						<br>
+						Amount:
+						<br>
+						<input type="number" name="amt" class="width" min="20">
+						<select name="width_end">
+							<option value="%">%</option>
+							<option value="px">px</option>
+						</select>
+						<br>
+					<div class="rgt"><button onclick="changeWH()">Customize</button></div>
+					</div>
+				</td>
+				<td>
+					<div class="section">
+						<div class="ctr"><strong>Margin & Padding</strong></div>
+						Attribute: <select name="attr_mp" id="attr_mp">
+							<option value="h1">website name</option>
+							<option value="div">div block</option>
+							<option value="h2">heading</option>
+							<option value="p">paragraphs</option>
+							<option value="form">form</option>
+							<option value="button">button</option>
+							<option value="body">body</option>
+							<option value="header">header</option>
+							<option value="main">main area</option>
+							<option value="footer">footer</option>
+							<option value="nav">navigation</option>
+							
+						</select>
+						<br>
+						Change: <select name="mp" id="mp">
+							<option value="margin">margin</option>
+							<option value="padding">padding</option>
+						</select>
+						<br>
+						* left: <select name="lft" id="lft">
+							<option value="auto">auto</option>
+							<option value="0px">0px</option>
+							<option value="15px">15px</option>
+							<option value="10px">10px</option>
+						</select>
+						<br>
+						* right: <select name="rgt" id="rgt">
+							<option value="auto">auto</option>
+							<option value="0px">0px</option>
+							<option value="15px">15px</option>
+							<option value="10px">10px</option>
+						</select>
+						<br>
+						* top: <select name="top" id="top">
+							<option value="auto">auto</option>
+							<option value="0px">0px</option>
+							<option value="15px">15px</option>
+							<option value="10px">10px</option>
+						</select>
+						<br>
+						* bottom: <select name="btm" id="btm">
+							<option value="auto">auto</option>
+							<option value="0px">0px</option>
+							<option value="15px">15px</option>
+							<option value="10px">10px</option>
+						</select>
+					<div class="rgt"><button onclick="changeMP()">Customize</button></div>
+					</div>
+				
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="section">
+						<div class="ctr"><strong>Website Name</strong></div>
+						<div class="ctr"><input type="text" name="wb_name" value=""></div>
+					<div class="rgt"><button onclick="changeName()">Add</button></div>
+					</div>
+				</td>
+				<td colspan="2">
+					<div class="section">
+						<div class="ctr"><strong>Colors</strong></div>
+						Attribute: <select name="attr_color">
+							<option value="body">body</option>
+							<option value="header">header</option>
+							<option value="main">main area</option>
+							<option value="footer">footer</option>
+							<option value="h1">website name</option>
+							<option value="div">div block</option>
+							<option value="h2">heading</option>
+							<option value="p">paragraphs</option>
+							<option value="form">form</option>
+							<option value="fieldset">fieldset</option>
+							<option value="legend">legend</option>
+							<option value="nav">navigation</option>
+							<option value="button">button</option>
+							<option value="button">button:hover</option>
+						</select>
+						<input type="color" name="my_color">
+						<br>
+						Text/Background: <select name="txt_color">
+							<option value="background-color">background color</option>
+							<option value="color">text color</option>
+						</select>
+						<br>
+					<div class="rgt"><button onclick="changeColor()">Customize</button></div>
+					</div>
+
+				</td>
+				
+			</tr>
+			
+			<tr>
+				<th><button onclick="openWin()">Open Window</button></th>
+				<th colspan="2" style="text-align:center; color: white;">
+					Result
+					<br>
+					<span id="result"></span></td>
+				<th><button onclick="closeWindow()">Close Window</button></th>
+			</tr>
+			
+			
+		</table>
+
+		
+		
+		
+		<footer>
+		<nav>
+			
+			<button onclick='window.open("http://www.w3schools.com/jsref/obj_window.asp")'>References</button>
+			<button onclick='window.open("http://www.w3schools.com/jsref/met_win_open.asp")' style="float: right">Examples</button>
+		</nav>
+        <table class="feature" border="1">
+			<tr>
+				<th colspan="6" style="text-align: center">Features</th>
+			</tr>
+            <tr>
+                <th colspan="2">HTML</th>
+                <th colspan="2">CSS</th>
+                <th colspan="2">JavaScript</th>
+            </tr>
+			<tr>
+				<th>Component</th>
+				<th>Description</th>
+				<th>Component</th>
+				<th>Description</th>
+				<th>Component</th>
+				<th>Description</th>
+			</tr>
+            <tr>
+                <td>Nav bar</td><td>automatically comes with 'Examples' button
+					<br><em>note: other buttons added don't have any operations right now (feature to be added later)</em></td>
+                <td>Margins & Padding</td><td>you can change left, right, top, and bottom</td>
+                <td>Window</td><td>open and close operations</td>
+            </tr>
+			<tr>
+                <td>h2</td><td>add secondary headings to webpage (does not take into account paragraphs below)</td>
+                <td>Width & Height</td><td> change using px or %</td>
+                <td>Event-driven Programming</td><td></td>
+            </tr>
+            <tr>
+                <td>h1</td><td> change name only</td>
+                <td>Borders</td><td>color, style, width</td>
+                <td></td><td></td>
+            </tr>
+			<tr>
+                <td>title (tab name)</td><td> what you see at the top of your browser</td>
+                <td>text-color</td><td> change using input selector</td>
+                <td></td><td></td>
+            </tr>
+			<tr>
+                <td>p</td><td>add paragraphs to main, footer, header, or div block</td>
+                <td>background-color</td><td> change using input selector</td>
+                <td></td><td></td>
+            </tr>
+			<tr>
+				<td>Div block</td><td> add dividers to webpage, add elements to it after
+					other processing with add to first div block only</td>
+				<td>text-alignment</td><td> change alignment of text to right, left, center, justify</td>
+				<td></td><td></td>
+			</tr>
+			<tr>
+				<td> Forms</td><td> colors, phone numbers, textarea/text input, email
+					<br>   <em>note: form info goes to php page</em></td>
+					
+				<td></td><td></td>
+				<td></td><td></td>
+			</tr>
+			<tr>
+			<td colspan="6" style="text-align:center;color:white;border-color: white;">This webpage allows you to experiment with building a webpage with forms from scratch.
+					Because the focus is more on forms, the addition of other features to your page may be not
+					be as ideal as one would like.</td>
+			</tr>
+			
+        </table>
+			<p class="ctr">A project by NRB Software</p>
+		</footer>
+        
+        <script src="pa5_script.js" type="text/javascript"></script>
+
+    </body>
+</html>
+
